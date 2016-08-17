@@ -1,0 +1,7 @@
+Using built-in specs.
+COLLECT_GCC=gcc64
+COLLECT_LTO_WRAPPER=c:/mingw/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/4.7.2/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../gcc-4.7.2/configure --build=x86_64-w64-mingw32 --enable-targets=all --disable-multilib --enable-64bit --prefix=/mingw64 --with-sysroot=/mingw64 --disable-shared --enable-static --disable-nls --enable-version-specific-runtime-libs --disable-win32-registry --without-dwarf2 --enable-sjlj-exceptions --enable-fully-dynamic-string --enable-languages=c,ada,lto,c++,objc,obj-c++,fortran --enable-libgomp --enable-lto --enable-libssp -enable-gnattools --disable-bootstrap --with-gcc --with-gnu-as --with-gnu-ld --with-stabs --enable-interwork --with-mpfr-include=/home/beta/gcc-build/../gcc-4.7.2/mpfr/src--with-mpfr-lib=/home/beta/gcc-build/mpfr/src/.libs --enable-objc-gc
+Thread model: win32
+gcc version 4.7.2 (GCC)
