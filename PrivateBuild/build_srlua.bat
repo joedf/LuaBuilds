@@ -59,7 +59,6 @@ cd src\srlua
 echo running make for x86
 rem set make_exe=make
 set make_exe=mingw32-make
-pause
 @mv makefile makefile.original.old
 mv Makefile86 makefile
 %make_exe%

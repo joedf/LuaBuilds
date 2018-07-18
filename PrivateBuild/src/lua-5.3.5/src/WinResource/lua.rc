@@ -1,0 +1,28 @@
+0 ICON "Icon_1.ico"
+
+1 VERSIONINFO
+FILEVERSION 5,3,5,0
+PRODUCTVERSION 5,3,5,0
+FILEOS 0x0
+FILETYPE 0x0
+{
+	BLOCK "StringFileInfo"
+	{
+		BLOCK "040904b0"
+		{
+			VALUE "Comments", "www.lua.org"
+			VALUE "CompanyName", "Lua.org"
+			VALUE "FileDescription", "Lua Console Standalone Interpreter"
+			VALUE "FileVersion", "5.3.5"
+			VALUE "LegalCopyright", "Copyright © 1994-2018 Lua.org, PUC-Rio."
+			VALUE "OriginalFilename", "lua.exe"
+			VALUE "ProductName", "Lua - The Programming Language"
+			VALUE "ProductVersion", "5.3.5"
+			VALUE "PrivateBuild", "Build by Joe DF (joedf@ahkscript.org)"
+		}
+	}
+	BLOCK "VarFileInfo"
+	{
+		VALUE "Translation", 0x0409, 0x04E4
+	}
+}

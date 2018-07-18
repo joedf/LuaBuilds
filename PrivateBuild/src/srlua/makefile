@@ -13,7 +13,7 @@ LUABIN= $(LUA)
 #LUABIN= $(LUA)/bin
 
 # probably no need to change anything below here
-CC= gcc64
+CC= gcc -m64
 CFLAGS= $(INCS) $(WARN) -O2 $G
 WARN= -ansi -pedantic -Wall -Wextra
 INCS= -I$(LUAINC)
@@ -39,8 +39,8 @@ $S:	$(OBJS)
 	$(CC) -o $@ $(EXPORT) $(OBJS) $(LIBS)
 
 # addicons:
-	windres64 glue.rc gluerc.o
-	windres64 srlua.rc srluarc.o
+	windres glue.rc gluerc.o
+	windres srlua.rc srluarc.o
 	$(CC) glue.c gluerc.o "lua53.dll" -o glue
 	$(CC) srlua.o srluarc.o "lua53.dll" -o srlua
 	@cmd /c "copy lua53.dll bin64\lua53.dll"
