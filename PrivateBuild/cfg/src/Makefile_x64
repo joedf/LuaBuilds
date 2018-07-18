@@ -6,13 +6,13 @@
 # Your platform. See PLATS for possible values.
 PLAT= none
 
-CC= gcc64 -std=gnu99
+CC= gcc -m64 -std=gnu99
 CFLAGS= -O2 -Wall -Wextra -DLUA_COMPAT_5_2 $(SYSCFLAGS) $(MYCFLAGS)
 LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
 LIBS= -lm $(SYSLIBS) $(MYLIBS)
 
-AR= ar64 rcu
-RANLIB= ranlib64
+AR= ar rcu
+RANLIB= ranlib
 RM= rm -f
 
 SYSCFLAGS=
@@ -114,7 +114,7 @@ macosx:
 
 mingw:
 	$(MAKE) "LUA_A=lua53.dll" "LUA_T=lua.exe" \
-	"AR=$(CC) -shared -o" "RANLIB=strip64 --strip-unneeded" \
+	"AR=$(CC) -shared -o" "RANLIB=strip --strip-unneeded" \
 	"SYSCFLAGS=-DLUA_BUILD_AS_DLL" "SYSLIBS=" "SYSLDFLAGS=-s" lua.exe
 	$(MAKE) "LUAC_T=luac.exe" luac.exe
 

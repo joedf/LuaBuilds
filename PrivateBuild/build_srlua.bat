@@ -28,7 +28,7 @@ del /s %SOURCE%.tar >nul 2>&1
 echo Extraction done.
 md srlua\luasrc
 echo Please select dir to copy lua-src from:
-ls -d */
+ls -d *
 set /p LUA_SRC=
 echo copying lua source files...
 cp %LUA_SRC%/src/*.c srlua/luasrc
@@ -46,9 +46,10 @@ cp -R cfg-srlua/* src\srlua
 echo Creating output dirs...
 md src\srlua\bin >nul 2>&1
 md src\srlua\bin64 >nul 2>&1
-echo setting up MinGW...
+echo setting up TDM / MinGW...
 @PATH=.;C:\MinGW\msys\1.0\local\bin;C:\MinGW\bin;C:\MinGW\msys\1.0\bin;%PATH%
-@echo MinGW Shell Paths have been added successfully.
+@PATH=.;C:\TDM-GCC-64\bin;%PATH%
+@echo TDM / MinGW Shell Paths have been added successfully.
 echo cleaning and preparing for x86 compilation
 call :clean_tmp
 echo copying lua5x.dll (x86) file...
@@ -56,9 +57,12 @@ cp %LUA_DLL%/x86/*.dll src/srlua
 echo Moving to compilation dir...
 cd src\srlua
 echo running make for x86
-mv makefile makefile.original.old
+rem set make_exe=make
+set make_exe=mingw32-make
+pause
+@mv makefile makefile.original.old
 mv Makefile86 makefile
-make
+%make_exe%
 cp *.dll bin
 cp *.exe bin
 echo x86 compilation done.
@@ -71,7 +75,7 @@ cd src\srlua
 echo running make for x64
 mv makefile Makefile86
 mv Makefile64 makefile
-make
+%make_exe%
 cp *.dll bin64 >nul 2>&1
 cp *.exe bin64 >nul 2>&1
 echo x64 compilation done.

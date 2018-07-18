@@ -47,7 +47,9 @@ set make_exe=mingw32-make
 echo running make for x86
 %make_exe%
 cd src
-%make_exe% -f Makefile_x86 mingw
+mv makefile makefile.original.old
+mv Makefile_x86 makefile
+%make_exe% mingw
 echo backing up object x86 files
 cp *.o o86
 cd ..
@@ -61,7 +63,7 @@ echo running make for x64
 rem following doesnt work well
 rem %make_exe% -f Makefile_x64 mingw
 rem workaround, by replacing it:
-mv makefile makefile.original.old
+mv makefile makefile.bkp.old
 mv Makefile_x64 makefile
 %make_exe% mingw
 echo backing up object x86 files
