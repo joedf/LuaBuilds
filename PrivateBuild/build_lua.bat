@@ -38,12 +38,16 @@ md src\bin >nul 2>&1
 md src\bin64 >nul 2>&1
 md src\o86 >nul 2>&1
 md src\o64 >nul 2>&1
-echo setting up MinGW...
+echo setting up TDM / MinGW...
 @PATH=.;C:\MinGW\msys\1.0\local\bin;C:\MinGW\bin;C:\MinGW\msys\1.0\bin;%PATH%
-@echo MinGW Shell Paths have been added successfully.
+@PATH=.;C:\TDM-GCC-64\bin;%PATH%
+rem set make_exe=make
+set make_exe=mingw32-make
+@echo TDM / MinGW Shell Paths have been added successfully.
 echo running make for x86
+%make_exe%
 cd src
-make -f Makefile_x86 mingw
+%make_exe% -f Makefile_x86 mingw
 echo backing up object x86 files
 cp *.o o86
 cd ..
@@ -55,11 +59,11 @@ echo cleaning and preparing for x64 compilation
 call :clean_tmp
 echo running make for x64
 rem following doesnt work well
-rem make -f Makefile_x64 mingw
+rem %make_exe% -f Makefile_x64 mingw
 rem workaround, by replacing it:
 mv makefile makefile.original.old
 mv Makefile_x64 makefile
-make mingw
+%make_exe% mingw
 echo backing up object x86 files
 cp *.o o64
 cd ..
