@@ -35,9 +35,6 @@ $T:	$S $(TEST) glue
 	chmod +x $T
 	rm glue.exe
 
-srlua.o:
-	$(CC) -o $(LIBS)
-
 $S:	$(OBJS)
 	$(CC) -o $@ $(EXPORT) $(OBJS) $(LIBS)
 
