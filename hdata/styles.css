@@ -15,6 +15,10 @@ th, td {
 	text-align: left;
 }
 
+table[data-sortable] th, table[data-sortable] td {
+	padding: 4px !important;
+}
+
 tbody tr:nth-child(2n+1) th,
 tbody tr:nth-child(2n+1) td {
 	background-color: #F9F9F9;
