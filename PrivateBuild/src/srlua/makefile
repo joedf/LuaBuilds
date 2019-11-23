@@ -13,11 +13,11 @@ LUABIN= $(LUA)
 #LUABIN= $(LUA)/bin
 
 # probably no need to change anything below here
-CC= gcc -m64
+CC= gcc -m64 -std=c99
 CFLAGS= $(INCS) $(WARN) -O2 $G
-WARN= -ansi -pedantic -Wall -Wextra
+WARN= -Wall -Wextra -Wfatal-errors -O2
 INCS= -I$(LUAINC)
-LIBS= -L$(LUALIB) "lua53.dll" -lm
+LIBS= -L$(LUALIB) "lua54.dll" -lm
 EXPORT=
 # for Mac OS X comment the previous line above or do 'make EXPORT='
 T= a.exe
@@ -30,8 +30,8 @@ all:	test
 test:	$T
 	./$T *
 
-$T:	$S $(TEST) glue
-	./bin64/glue bin64/$S $(TEST) $T
+$T:	$S $(TEST) srglue
+	./bin64/srglue bin64/$S $(TEST) $T
 	chmod +x $T
 	rm glue.exe
 
@@ -39,17 +39,17 @@ $S:	$(OBJS)
 	$(CC) -o $@ $(EXPORT) $(OBJS) $(LIBS)
 
 # addicons:
-	windres glue.rc gluerc.o
+	windres srglue.rc srgluerc.o
 	windres srlua.rc srluarc.o
-	$(CC) glue.c gluerc.o "lua53.dll" -o glue
-	$(CC) srlua.o srluarc.o "lua53.dll" -o srlua
-	@cmd /c "copy lua53.dll bin64\lua53.dll"
-	@mv glue.exe bin64\glue.exe
+	$(CC) srglue.c srgluerc.o "lua54.dll" -o srglue
+	$(CC) srlua.o srluarc.o "lua54.dll" -o srlua
+	@cmd /c "copy lua54.dll bin64\lua54.dll"
+	@mv srglue.exe bin64\srglue.exe
 	@mv srlua.exe bin64\srlua.exe
 	@rm *.o
 	@rm *.dll
 
 clean:
-	rm -f $(OBJS) $T $S core core.* a.out *.o glue
+	rm -f $(OBJS) $T $S core core.* a.out *.o srglue
 
 # eof

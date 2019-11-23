@@ -1,44 +1,36 @@
-# makefile for srlua
+# Makefile for srlua
 
-# change these to reflect your Lua installation
-LUA= /tmp/lhf/lua-5.3.0
-LUAINC= $(LUA)/src
-LUALIB= $(LUA)/src
-LUABIN= $(LUA)/src
+LUA_TOPDIR= /usr/local
+LUA_INCDIR= $(LUA_TOPDIR)/include
+LUA_LIBDIR= $(LUA_TOPDIR)/lib
+INSTALL_DIR= /usr/local/bin
 
-# these will probably work if Lua has been installed globally
-#LUA= /usr/local
-#LUAINC= $(LUA)/include
-#LUALIB= $(LUA)/lib
-#LUABIN= $(LUA)/bin
-
-# probably no need to change anything below here
 CC= gcc -std=c99
-CFLAGS= $(INCS) $(WARN) -O2 $G
-WARN= -Wall -Wextra
-INCS= -I$(LUAINC)
-LIBS= -L$(LUALIB) -llua -lm -ldl
-EXPORT= -Wl,-E
-# for Mac OS X comment the previous line above or do 'make EXPORT='
+CFLAGS= -Wall -Wextra -Wfatal-errors -O2
+MYCFLAGS= $(CFLAGS) -I$(LUA_INCDIR)
+MYLFLAGS= -Wl,-E
+MYLIBS= -L$(LUA_LIBDIR) -llua -lm -ldl
 
-T= a.out
-S= srlua
-OBJS= srlua.o
-TEST= test.lua
+all:	bin test
 
-all:	test
+bin:
+	@$(MAKE) `uname`
 
-test:	$T
-	./$T *
+test:
+	./srglue srlua test.lua a.out ; chmod +x a.out
+	./a.out *
 
-$T:	$S $(TEST) glue
-	./glue $S $(TEST) $T
-	chmod +x $T
-
-$S:	$(OBJS)
-	$(CC) -o $@ $(EXPORT) $(OBJS) $(LIBS)
+install:
+	cp srglue srlua $(INSTALL_DIR)
 
 clean:
-	-rm -f $(OBJS) $T $S core core.* a.out *.o glue
+	rm -f srglue srlua a.out
 
-# eof
+Linux build:
+	$(CC) $(CFLAGS) -o srglue srglue.c
+	$(CC) $(MYCFLAGS) -o srlua srlua.c $(MYLIBS) $(MYLFLAGS)
+
+Darwin:
+	$(MAKE) build MYLFLAGS=
+
+.PHONY: all bin test install clean Linux Darwin build
