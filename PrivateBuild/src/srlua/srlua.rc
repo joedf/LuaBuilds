@@ -14,7 +14,7 @@ FILETYPE 0x0
 			VALUE "CompanyName", "Lua.org"
 			VALUE "FileDescription", "Lua executable script wrapper"
 			VALUE "FileVersion", "5.4.0"
-			VALUE "LegalCopyright", "Copyright © 1994-2019 Lua.org, PUC-Rio."
+			VALUE "LegalCopyright", "Copyright © 1994-2020 Lua.org, PUC-Rio."
 			VALUE "OriginalFilename", "srlua.exe"
 			VALUE "ProductName", "srLua - Lua executable script wrapper"
 			VALUE "ProductVersion", "5.4.0"

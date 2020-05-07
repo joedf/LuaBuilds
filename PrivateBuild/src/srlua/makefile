@@ -33,7 +33,7 @@ test:	$T
 $T:	$S $(TEST) srglue
 	./bin64/srglue bin64/$S $(TEST) $T
 	chmod +x $T
-	rm glue.exe
+	rm srglue.exe
 
 $S:	$(OBJS)
 	$(CC) -o $@ $(EXPORT) $(OBJS) $(LIBS)

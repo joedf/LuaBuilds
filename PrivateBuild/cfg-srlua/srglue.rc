@@ -14,9 +14,9 @@ FILETYPE 0x0
 			VALUE "CompanyName", "Lua.org"
 			VALUE "FileDescription", "Lua script to executable glue tool"
 			VALUE "FileVersion", "5.4.0"
-			VALUE "LegalCopyright", "Copyright © 1994-2019 Lua.org, PUC-Rio."
-			VALUE "OriginalFilename", "glue.exe"
-			VALUE "ProductName", "glue - Lua script to executable glue tool"
+			VALUE "LegalCopyright", "Copyright © 1994-2020 Lua.org, PUC-Rio."
+			VALUE "OriginalFilename", "srglue.exe"
+			VALUE "ProductName", "srglue - Lua script to executable glue tool"
 			VALUE "ProductVersion", "5.4.0"
 			VALUE "PrivateBuild", "Build by Joe DF (joedf@ahkscript.org)"
 		}
