@@ -1,4 +1,4 @@
-# ![Lua Logo | width=48](hdata/lua.png) LuaBuilds
+# ![Lua Logo =48x48](hdata/lua.png) LuaBuilds
 
 joedf's Lua builds - Files  
 Original: http://joedf.users.sourceforge.net/luabuilds/ (now redirected)  
