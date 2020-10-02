@@ -1,4 +1,5 @@
-# LuaBuilds
+# ![Lua Logo](hdata/lua.png) LuaBuilds
+
 joedf's Lua builds - Files  
 Original: http://joedf.users.sourceforge.net/luabuilds/ (now redirected)  
 Released under MIT License.
