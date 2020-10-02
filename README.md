@@ -1,4 +1,4 @@
-# ![Lua Logo =48x48](hdata/lua.png) LuaBuilds
+# <img src="hdata/lua.png" alt="Lua Logo" width="64" height="64"> LuaBuilds
 
 joedf's Lua builds - Files  
 Original: http://joedf.users.sourceforge.net/luabuilds/ (now redirected)  
