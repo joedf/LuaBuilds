@@ -34,6 +34,11 @@ h1:first-child {
 	padding-bottom: 5px;
 }
 
+h1 > small {
+	display: inline-block;
+	font-size: .5em;
+	margin-top: .5em;
+}
 
 h2 {
 	border-color: #468847;
