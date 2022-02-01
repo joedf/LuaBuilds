@@ -30,7 +30,23 @@
 		<div id="body">
 
 		<details open>
-			<summary><h2>Lua 5.4.3</h2></summary>
+			<summary><h2>Lua 5.4.4</h2></summary>
+			<div class="file-listing">
+				<table class="sortable-theme-bootstrap" data-sortable>
+					<thead><tr><th id="th01a">Name</th><th>Last modified</th><th>Size</th></tr></thead>
+					<tbody>
+						<tr><td><a href="hdata/lua-5.4.4_Win32_bin.zip">lua-5.4.4_Win32_bin.zip</a></td><td align="right">2022-01-31 20:07  </td><td align="right"> 488 Kb</td></tr>
+						<tr><td><a href="hdata/lua-5.4.4_Win64_bin.zip">lua-5.4.4_Win64_bin.zip</a></td><td align="right">2022-01-31 20:06  </td><td align="right"> 538 Kb</td></tr>
+						<tr><td><a href="hdata/srlua-5.4.4_Win32_bin.zip">srlua-5.4.4_Win32_bin.zip</a></td><td align="right">2022-01-31 20:07  </td><td align="right"> 495 Kb</td></tr>
+						<tr><td><a href="hdata/srlua-5.4.4_Win64_bin.zip">srlua-5.4.4_Win64_bin.zip</a></td><td align="right">2022-01-31 20:07  </td><td align="right"> 552 Kb</td></tr>
+						<tr><td><a href="hdata/libgcc_s_dw2-1.dll.zip">libgcc_s_dw2-1.dll.zip</a></td><td align="right">2016-01-05 20:25  </td><td align="right"> 47 Kb</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</details>
+
+		<details>
+			<summary><h2>Lua 5.4.3, Lua 5.4.2</h2></summary>
 			<div class="file-listing">
 				<table class="sortable-theme-bootstrap" data-sortable>
 					<thead><tr><th id="th01a">Name</th><th>Last modified</th><th>Size</th></tr></thead>
@@ -39,18 +55,6 @@
 						<tr><td><a href="hdata/lua-5.4.3_Win64_bin.zip">lua-5.4.3_Win64_bin.zip</a></td><td align="right">2021-03-30 13:29  </td><td align="right"> 450 Kb</td></tr>
 						<tr><td><a href="hdata/srlua-5.4.3_Win32_bin.zip">srlua-5.4.3_Win32_bin.zip</a></td><td align="right">2021-03-30 13:30  </td><td align="right"> 348 Kb</td></tr>
 						<tr><td><a href="hdata/srlua-5.4.3_Win64_bin.zip">srlua-5.4.3_Win64_bin.zip</a></td><td align="right">2021-03-30 13:31  </td><td align="right"> 370 Kb</td></tr>
-						<tr><td><a href="hdata/libgcc_s_dw2-1.dll.zip">libgcc_s_dw2-1.dll.zip</a></td><td align="right">2016-01-05 20:25  </td><td align="right"> 47 Kb</td></tr>
-					</tbody>
-				</table>
-			</div>
-		</details>
-
-		<details>
-			<summary><h2>Lua 5.4.2</h2></summary>
-			<div class="file-listing">
-				<table class="sortable-theme-bootstrap" data-sortable>
-					<thead><tr><th id="th01a">Name</th><th>Last modified</th><th>Size</th></tr></thead>
-					<tbody>
 						<tr><td><a href="hdata/lua-5.4.2_Win32_bin.zip">lua-5.4.2_Win32_bin.zip</a></td><td align="right">2021-01-08 12:24  </td><td align="right"> 432 Kb</td></tr>
 						<tr><td><a href="hdata/lua-5.4.2_Win64_bin.zip">lua-5.4.2_Win64_bin.zip</a></td><td align="right">2021-01-08 12:23  </td><td align="right"> 450 Kb</td></tr>
 						<tr><td><a href="hdata/srlua-5.4.2_Win32_bin.zip">srlua-5.4.2_Win32_bin.zip</a></td><td align="right">2021-01-08 12:26  </td><td align="right"> 347 Kb</td></tr>
@@ -166,7 +170,7 @@ Configured with: /home/cauchy/vcs/svn/gcc/branches/gcc-4_8-branch/configure --pr
 Thread model: win32
 gcc version 4.8.4 20140710 (prerelease) (GCC) 
 </pre>
-		<p class="com">TDM-GCC (for Lua v5.3.5 and newer)</p>
+		<p class="com">TDM-GCC (for Lua v5.3.5 to Lua v5.4.3)</p>
 <pre>
 Using built-in specs.
 COLLECT_GCC=gcc
@@ -175,6 +179,17 @@ Target: x86_64-w64-mingw32
 Configured with: ../../../src/gcc-5.1.0/configure --build=x86_64-w64-mingw32 --enable-targets=all --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-libgomp --enable-lto --enable-graphite --enable-cxx-flags=-DWINPTHREAD_STATIC --disable-build-with-cxx --disable-build-poststage1-with-cxx --enable-libstdcxx-debug --enable-threads=posix --enable-version-specific-runtime-libs --enable-fully-dynamic-string --enable-libstdcxx-threads --enable-libstdcxx-time --with-gnu-ld --disable-werror --disable-nls --disable-win32-registry --prefix=/mingw64tdm --with-local-prefix=/mingw64tdm --with-pkgversion=tdm64-1 --with-bugurl=http://tdm-gcc.tdragon.net/bugs
 Thread model: posix
 gcc version 5.1.0 (tdm64-1)
+</pre>
+		<p class="com">TDM-GCC (for Lua v5.4.4 and newer)</p>
+<pre>
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=C:/TDM-GCC-64/bin/../libexec/gcc/x86_64-w64-mingw32/10.3.0/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-git-10.3.0/configure --build=x86_64-w64-mingw32 --enable-targets=all --enable-languages=ada,c,c++,fortran,jit,lto,objc,obj-c++ --enable-libgomp --enable-lto --enable-graphite --enable-cxx-flags=-DWINPTHREAD_STATIC --disable-build-with-cxx --disable-build-poststage1-with-cxx --enable-libstdcxx-debug --enable-threads=posix --enable-version-specific-runtime-libs --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --enable-libstdcxx-threads --enable-libstdcxx-time=yes --enable-mingw-wildcard --with-gnu-ld --disable-werror --enable-nls --disable-win32-registry --enable-large-address-aware --disable-rpath --disable-symvers --prefix=/mingw64tdm --with-local-prefix=/mingw64tdm --with-pkgversion=tdm64-1 --with-bugurl=https://github.com/jmeubank/tdm-gcc/issues
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 10.3.0 (tdm64-1)
 </pre>
 		</div>
 		
