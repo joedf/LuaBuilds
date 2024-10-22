@@ -12,11 +12,11 @@ FILETYPE 0x0
 			VALUE "CompanyName", "Lua.org"
 			VALUE "FileDescription", "Lua Language Run Time"
 			VALUE "FileVersion", "5.4.7"
-			VALUE "LegalCopyright", "Copyright © 1994-2024 Lua.org, PUC-Rio."
+			VALUE "LegalCopyright", "Copyright ï¿½ 1994-2024 Lua.org, PUC-Rio."
 			VALUE "OriginalFilename", "lua54.dll"
 			VALUE "ProductName", "Lua - The Programming Language"
 			VALUE "ProductVersion", "5.4.7"
-			VALUE "PrivateBuild", "Build by Joe DF (joedf@ahkscript.org)"
+			VALUE "PrivateBuild", "Build by Joe DF (joedf.github.io)"
 		}
 	}
 	BLOCK "VarFileInfo"

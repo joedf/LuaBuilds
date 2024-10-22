@@ -14,11 +14,11 @@ FILETYPE 0x0
 			VALUE "CompanyName", "Lua.org"
 			VALUE "FileDescription", "Lua executable script wrapper"
 			VALUE "FileVersion", "5.4.6"
-			VALUE "LegalCopyright", "Copyright © 1994-2023 Lua.org, PUC-Rio."
+			VALUE "LegalCopyright", "Copyright ï¿½ 1994-2023 Lua.org, PUC-Rio."
 			VALUE "OriginalFilename", "srlua.exe"
 			VALUE "ProductName", "srLua - Lua executable script wrapper"
-			VALUE "ProductVersion", "5.4.6"
-			VALUE "PrivateBuild", "Build by Joe DF (joedf@ahkscript.org)"
+			VALUE "ProductVersion", "5.4.7"
+			VALUE "PrivateBuild", "Build by Joe DF (joedf.github.io)"
 		}
 	}
 	BLOCK "VarFileInfo"
