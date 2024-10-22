@@ -1,8 +1,8 @@
 0  ICON  "lua.ico"
 
 1 VERSIONINFO
-FILEVERSION 5,4,6,0
-PRODUCTVERSION 5,4,6,0
+FILEVERSION 5,4,7,0
+PRODUCTVERSION 5,4,7,0
 FILEOS 0x0
 FILETYPE 0x0
 {
@@ -13,12 +13,12 @@ FILETYPE 0x0
 			VALUE "Comments", "www.lua.org"
 			VALUE "CompanyName", "Lua.org"
 			VALUE "FileDescription", "Lua script to executable glue tool"
-			VALUE "FileVersion", "5.4.6"
-			VALUE "LegalCopyright", "Copyright © 1994-2023 Lua.org, PUC-Rio."
+			VALUE "FileVersion", "5.4.7"
+			VALUE "LegalCopyright", "Copyright ï¿½ 1994-2023 Lua.org, PUC-Rio."
 			VALUE "OriginalFilename", "srglue.exe"
 			VALUE "ProductName", "srglue - Lua script to executable glue tool"
-			VALUE "ProductVersion", "5.4.6"
-			VALUE "PrivateBuild", "Build by Joe DF (joedf@ahkscript.org)"
+			VALUE "ProductVersion", "5.4.7"
+			VALUE "PrivateBuild", "Build by Joe DF (joedf.github.io)"
 		}
 	}
 	BLOCK "VarFileInfo"
