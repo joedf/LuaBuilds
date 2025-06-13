@@ -26,6 +26,7 @@ tbody tr:nth-child(2n+1) td {
 
 
 #footer {
+	padding-top: 1.5em;
 	font-size:x-small;
 }
 
@@ -64,7 +65,7 @@ summary::marker {
 }
 
 .com {
-	//text-align: center;
+	/* text-align: center; */
 	font-weight: bold;
 }
 
