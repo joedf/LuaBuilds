@@ -17,7 +17,7 @@ CC= gcc -m64 -std=c99
 CFLAGS= $(INCS) $(WARN) -O2 $G
 WARN= -Wall -Wextra -Wfatal-errors -O2
 INCS= -I$(LUAINC)
-LIBS= -L$(LUALIB) "lua54.dll" -lm
+LIBS= -L$(LUALIB) "lua55.dll" -lm
 EXPORT=
 # for Mac OS X comment the previous line above or do 'make EXPORT='
 T= a.exe
@@ -41,9 +41,9 @@ $S:	$(OBJS)
 # addicons:
 	windres srglue.rc srgluerc.o
 	windres srlua.rc srluarc.o
-	$(CC) srglue.c srgluerc.o "lua54.dll" -o srglue
-	$(CC) srlua.o srluarc.o "lua54.dll" -o srlua
-	@cmd /c "copy lua54.dll bin64\lua54.dll"
+	$(CC) srglue.c srgluerc.o "lua55.dll" -o srglue
+	$(CC) srlua.o srluarc.o "lua55.dll" -o srlua
+	@cmd /c "copy lua55.dll bin64\lua55.dll"
 	@mv srglue.exe bin64\srglue.exe
 	@mv srlua.exe bin64\srlua.exe
 	@rm *.o
