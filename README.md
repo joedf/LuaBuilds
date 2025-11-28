@@ -3,4 +3,4 @@
 joedf's Lua builds.
 
 Released under the [MIT License](LICENSE).  
-Lua is released under [MIT](https://www.lua.org/license.html), Copyright © 1994–2016 Lua.org, PUC-Rio. 
+Lua is released under [MIT](https://www.lua.org/license.html), Copyright © 1994–2025 Lua.org, PUC-Rio. 
