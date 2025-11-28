@@ -8,6 +8,7 @@ cd src
 mkdir bin >nul 2>&1
 
 windres --output-format=coff --target=pe-i386 WinResource\lua.rc lua.rc.o
+windres --output-format=coff --target=pe-i386 WinResource\wlua.rc wlua.rc.o
 windres --output-format=coff --target=pe-i386 WinResource\luac.rc luac.rc.o
 windres --output-format=coff --target=pe-i386 WinResource\dll.rc dll.rc.o
 
@@ -15,7 +16,7 @@ gcc -m32 -shared -o bin\lua55.dll dll.rc.o lapi.o lcode.o lctype.o ldebug.o ldo.
 
 strip --strip-unneeded lua55.dll
 gcc -m32 -o bin\lua.exe -s  lua.o lua.rc.o lua55.dll -lm
-gcc -m32 -o bin\wlua.exe -s -mwindows  lua.o lua.rc.o lua55.dll -lm
+gcc -m32 -o bin\wlua.exe -s -mwindows  lua.o wlua.rc.o lua55.dll -lm
 gcc -m32 -o bin\luac.exe   luac.o luac.rc.o liblua.a -lm
 
 del WinResource\*.o >nul 2>&1
