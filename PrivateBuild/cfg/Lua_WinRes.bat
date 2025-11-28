@@ -15,6 +15,7 @@ gcc -m32 -shared -o bin\lua55.dll dll.rc.o lapi.o lcode.o lctype.o ldebug.o ldo.
 
 strip --strip-unneeded lua55.dll
 gcc -m32 -o bin\lua.exe -s  lua.o lua.rc.o lua55.dll -lm
+gcc -m32 -o bin\wlua.exe -s -mwindows  lua.o lua.rc.o lua55.dll -lm
 gcc -m32 -o bin\luac.exe   luac.o luac.rc.o liblua.a -lm
 
 del WinResource\*.o >nul 2>&1
