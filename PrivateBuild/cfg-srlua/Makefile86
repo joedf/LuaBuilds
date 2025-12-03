@@ -43,7 +43,7 @@ $S:	$(OBJS)
 	windres --output-format=coff --target=pe-i386 srlua.rc srluarc.o
 	$(CC) srglue.c srgluerc.o "lua55.dll" -o srglue
 	$(CC) srlua.o srluarc.o "lua55.dll" -o srlua
-	@cmd /c "copy lua55.dll bin\lua55.dll"
+	@cp lua55.dll bin\lua55.dll
 	@mv srglue.exe bin\srglue.exe
 	@mv srlua.exe bin\srlua.exe
 	@rm *.o

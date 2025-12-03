@@ -62,8 +62,8 @@ set make_exe=mingw32-make
 @mv makefile makefile.original.old
 mv Makefile86 makefile
 %make_exe%
-cp *.dll bin
-cp *.exe bin
+copy *.dll bin
+copy *.exe bin
 echo x86 compilation done.
 echo cleaning and preparing for x64 compilation
 call :clean_tmp
@@ -75,8 +75,8 @@ echo running make for x64
 mv makefile Makefile86
 mv Makefile64 makefile
 %make_exe%
-cp *.dll bin64 >nul 2>&1
-cp *.exe bin64 >nul 2>&1
+copy *.dll bin64 >nul 2>&1
+copy *.exe bin64 >nul 2>&1
 echo x64 compilation done.
 echo cleaning...
 call :clean_tmp

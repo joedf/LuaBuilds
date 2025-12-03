@@ -43,7 +43,7 @@ $S:	$(OBJS)
 	windres srlua.rc srluarc.o
 	$(CC) srglue.c srgluerc.o "lua55.dll" -o srglue
 	$(CC) srlua.o srluarc.o "lua55.dll" -o srlua
-	@cmd /c "copy lua55.dll bin64\lua55.dll"
+	@cp lua55.dll bin64\lua55.dll
 	@mv srglue.exe bin64\srglue.exe
 	@mv srlua.exe bin64\srlua.exe
 	@rm *.o
