@@ -1,3 +1,8 @@
 ~*
 *.exe
+*.dll
+*.o
+*.a
+*/src/WinResource
 */src/lua-5.1/*/*.o
+/PrivateBuild/src/*/src/WinResource
