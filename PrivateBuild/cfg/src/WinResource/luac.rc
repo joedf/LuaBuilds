@@ -1,8 +1,9 @@
+#include "common.h"
 0 ICON "Icon_1.ico"
 
 1 VERSIONINFO
-FILEVERSION 5,5,0,0
-PRODUCTVERSION 5,5,0,0
+FILEVERSION LUA_VERSION
+PRODUCTVERSION LUA_VERSION
 FILEOS 0x0
 FILETYPE 0x0
 {
@@ -10,15 +11,15 @@ FILETYPE 0x0
 	{
 		BLOCK "040904b0"
 		{
-			VALUE "Comments", "www.lua.org"
-			VALUE "CompanyName", "Lua.org"
+			VALUE "Comments", G_COMMENTS
+			VALUE "CompanyName", G_COMPANYNAME
 			VALUE "FileDescription", "Lua Console Standalone Compiler"
-			VALUE "FileVersion", "5.5.0"
-			VALUE "LegalCopyright", "Copyright (C) 1994-2025 Lua.org, PUC-Rio."
+			VALUE "FileVersion", LUA_VERSION_STR
+			VALUE "LegalCopyright", G_LEGALCOPYRIGHT
 			VALUE "OriginalFilename", "luac.exe"
-			VALUE "ProductName", "Lua - The Programming Language"
-			VALUE "ProductVersion", "5.5.0"
-			VALUE "PrivateBuild", "Build by Joe DF (joedf.github.io)"
+			VALUE "ProductName", G_PRODUCTNAME
+			VALUE "ProductVersion", LUA_VERSION_STR
+			VALUE "PrivateBuild", G_PRIVATEBUILD
 		}
 	}
 	BLOCK "VarFileInfo"
