@@ -7,12 +7,12 @@
 LIBNAME = lpeg
 
 # Path to Lua source code to use...
-LUADIR = ./../../../../src/lua-5.5.0-rc4/src
+LUADIR = ./../../../../src/lua-5.5.0/src
 
 # Path to LuaXX.dll file (exclude the file extension)
-LUADLL = ./../../../../builds/lua-5.5.0-rc4/x64/lua55
+LUADLL = ./../../../../builds/lua-5.5.0/x64/lua55
 # Path to Lua executable (exclude the file extension)
-LUABIN = ./../../../../builds/lua-5.5.0-rc4/x64/lua
+LUABIN = ./../../../../builds/lua-5.5.0/x64/lua
 
 CCBIT = -m64
 WINDLLFLAGS = -shared -l$(LUADLL) -I$(LUADIR) -L$(LUADIR)
