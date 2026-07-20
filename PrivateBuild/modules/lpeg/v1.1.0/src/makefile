@@ -7,16 +7,29 @@
 LIBNAME = lpeg
 
 # Path to Lua source code to use...
-LUADIR = ./../../../../src/lua-5.5.0/src
+LUADIR = ./../../../../src/lua-5.5.1-rc1/src
 
 # Path to LuaXX.dll file (exclude the file extension)
-LUADLL = ./../../../../builds/lua-5.5.0/x64/lua55
+LUADLL = ./../../../../builds/lua-5.5.1-rc1/x64/lua55
 # Path to Lua executable (exclude the file extension)
-LUABIN = ./../../../../builds/lua-5.5.0/x64/lua
+LUABIN = ./../../../../builds/lua-5.5.1-rc1/x64/lua
+
+# ... and the paths for 32 bit (x86) builds
+LUADLL32 = ./../../../../builds/lua-5.5.1-rc1/x86/lua55
+LUABIN32 = ./../../../../builds/lua-5.5.1-rc1/x86/lua
+
+# ---------------------------------------------------------
+
+BUILD32 ?= off
 
 CCBIT = -m64
-WINDLLFLAGS = -shared -l$(LUADLL) -I$(LUADIR) -L$(LUADIR)
+ifeq "$(BUILD32)" "true"
+    CCBIT = -m32
+    LUADLL = $(LUADLL32)
+    LUABIN = $(LUABIN32)
+endif
 
+WINDLLFLAGS = -shared -l$(LUADLL) -I$(LUADIR) -L$(LUADIR)
 
 COPT = -O2 -DNDEBUG
 # COPT = -O0 -DLPEG_DEBUG -g
