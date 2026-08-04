@@ -35,6 +35,13 @@
 				<table class="sortable-theme-bootstrap" data-sortable>
 					<thead><tr><th id="th01a">Name</th><th>Last modified</th><th>Size</th></tr></thead>
 					<tbody>
+						<tr><td><a href="hdata/lua-5.5.1_Win32_bin.zip">lua-5.5.1_Win32_bin.zip</a></td><td align="right">2026-08-04 11:02  </td><td align="right"> 541 Kb</td></tr>
+						<tr><td><a href="hdata/lua-5.5.1_Win64_bin.zip">lua-5.5.1_Win64_bin.zip</a></td><td align="right">2026-08-04 11:02  </td><td align="right"> 610 Kb</td></tr>
+						<tr><td><a href="hdata/srlua-5.5.1_Win32_bin.zip">srlua-5.5.1_Win32_bin.zip</a></td><td align="right">2026-08-04 11:02  </td><td align="right"> 507 Kb</td></tr>
+						<tr><td><a href="hdata/srlua-5.5.1_Win64_bin.zip">srlua-5.5.1_Win64_bin.zip</a></td><td align="right">2026-08-04 11:02  </td><td align="right"> 563 Kb</td></tr>
+
+						<tr><td><a href="hdata/lpeg-1.1.0-on-lua5.5.1.zip">lpeg-1.1.0-on-lua5.5.1.zip</a></td><td align="right">2026-08-04 11:01  </td><td align="right"> 99 Kb</td></tr>
+
 						<tr><td><a href="hdata/lua-5.5.1-rc2_Win32_bin.zip">lua-5.5.1-rc2_Win32_bin.zip</a></td><td align="right">2026-07-26 11:18  </td><td align="right"> 480 Kb</td></tr>
 						<tr><td><a href="hdata/lua-5.5.1-rc2_Win64_bin.zip">lua-5.5.1-rc2_Win64_bin.zip</a></td><td align="right">2026-07-26 11:18  </td><td align="right"> 500 Kb</td></tr>
 						<tr><td><a href="hdata/srlua-5.5.1-rc2_Win32_bin.zip">srlua-5.5.1-rc2_Win32_bin.zip</a></td><td align="right">2026-07-26 11:19  </td><td align="right"> 359 Kb</td></tr>
@@ -55,7 +62,7 @@
 			</div>
 		</details>
 
-		<details open>
+		<details>
 			<summary><h2>Lua 5.5.0</h2></summary>
 			<div class="file-listing">
 				<table class="sortable-theme-bootstrap" data-sortable>
@@ -229,6 +236,8 @@
 
 		<p><b>Modules:</b> Some modules may be requested. I will attempt to build these on a case-by-case basis depending on my free time and the complexity. For example, <a href="https://www.inf.puc-rio.br/~roberto/lpeg/">LPeg</a> v1.1.0 (built against Lua v5.5.0-rc4) is provided (as a zip of DLL files) above.</p>
 
+		<p><b>File Size:</b> File sizes can fluctuate. This can be mainly attributed to the compiler (and its options) used or a possible general trend of increasing file size with newer versions of software as bugs are fixed and new features are added.</p>
+
 		<p>Compiled by <a href="https://joedf.github.io/">Joe DF</a>.</p>
 		
 		<h1>Compiler Specifications</h1>
@@ -256,7 +265,8 @@ gcc version 4.8.4 20140710 (prerelease) (GCC)
 </pre>
 </details>
 
-<details><summary class="com">TDM-GCC (for Lua v5.3.5 to Lua v5.4.3, Lua v5.4.7, Lua 5.5.0-beta, Lua 5.5.1-rc1+rc2)</summary>
+<details><summary class="com">TDM-GCC v5.1.0</summary>
+<p>Was used for Lua v5.3.5 to Lua v5.4.3, Lua v5.4.7, Lua 5.5.0-beta, and Lua 5.5.1 RCs.</p>
 <pre>
 Using built-in specs.
 COLLECT_GCC=gcc
@@ -268,7 +278,8 @@ gcc version 5.1.0 (tdm64-1)
 </pre>
 </details>
 
-<details><summary class="com">TDM-GCC (for Lua v5.4.4 to Lua v5.4.8, and Lua 5.5.0 +RCs)</summary>
+<details><summary class="com">TDM-GCC v10.3.0</summary>
+<p>Was used for Lua v5.4.4 to Lua v5.4.8, Lua 5.5.0, and Lua 5.5.1.</p>
 <pre>
 Using built-in specs.
 COLLECT_GCC=gcc
